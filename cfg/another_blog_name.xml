@@ -1,0 +1,41 @@
+<config>
+  <logger>
+    <filepath>./log/another_blog_name.log</filepath>
+  </logger>
+  
+  <db>
+    <tables_prefix>another_blog_name</tables_prefix>
+    <dbi_path>DBI:mysql:ljfrenzy:127.0.0.1</dbi_path>
+    <user>root</user>
+    <password>QAZxsw123</password>
+  </db>
+  
+  <lj>
+    <user>another_blog_name</user>
+    <password>another_blog_password</password>
+    <xmlrpc_interface>http://www.livejournal.com/interface/xmlrpc</xmlrpc_interface>
+    <sleep>20</sleep>
+  </lj>
+  
+  <harvester>
+    <source>kiev_child</source>
+	<source>ua_baby</source>
+	<source>ua_baby_photo</source>
+  </harvester>
+  
+  <friender>
+    <friends_per_launch>5</friends_per_launch>
+  </friender>
+  
+  <killer>
+    <friends_per_launch>60</friends_per_launch>
+    <oneway_ttl>172800</oneway_ttl>
+  </killer>
+  
+  <cron>
+    <granula>300</granula>
+    <killer>5</killer>
+    <friender>10</friender>
+    <harvester>150</harvester>
+  </cron>
+</config>
